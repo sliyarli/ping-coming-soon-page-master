@@ -1,0 +1,92 @@
+* {
+  border: none;
+  outline: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-decoration: none !important;
+  resize: none;
+  font-family: "Libre Franklin", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  /* font-size: 20px !important; */
+}
+
+:root {
+  /* Primary Colors */
+  --blue: hsl(223, 87%, 63%);
+
+  /* Secondary Colors */
+  --pale-blue: hsl(223, 100%, 88%);
+  --light-red: hsl(354, 100%, 66%);
+
+  /* Neutral Colors */
+  --gray: hsl(0, 0%, 59%);
+  --very-dark-blue: hsl(209, 33%, 12%);
+}
+
+.row {
+  margin: auto 0 !important;
+}
+
+#site-logo {
+  width: 50px;
+}
+
+.site-heading {
+  font-size: 35px;
+  color: var(--gray);
+}
+
+header p {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.form-container {
+}
+
+.newsletter-form {
+}
+
+.newsletter-form input {
+  border: 1px solid var(--pale-blue) !important;
+  width: 270px;
+  padding: 0px 15px;
+}
+
+.newsletter-form input::placeholder {
+  font-size: 12px;
+  color: var(--pale-blue);
+}
+
+.newsletter-form input,
+.newsletter-form .form-button {
+  border-radius: 30px;
+  height: 40px;
+}
+
+.form-button {
+  width: 130px;
+  background-color: var(--blue);
+  font-size: 12px;
+}
+
+main img {
+  width: 30%;
+}
+
+.socials {
+}
+.social-media-item {
+  border: 1px solid var(--pale-blue);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+}
+.copyright-text {
+  font-size: 10px;
+  color: var(--pale-blue);
+}
