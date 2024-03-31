@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const mobileNotification = document.getElementById("mobile-notification");
   const desktopNotification = document.getElementById("desktop-notification");
 
+  let currentErrorMessage = "";
+
   function checkEmpty() {
     if (inputElement.value == "") {
       showError("Whoops! It looks like you forgot to add your email");
@@ -15,18 +17,12 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function showError(message) {
-    if (window.innerWidth < 768) {
-      inputElement.className = "form-control is-invalid";
-      mobileNotification.classList.add("show-up");
-      mobileNotification.innerText = message;
-    } else {
-      inputElement.className = "form-control is-invalid";
-      desktopNotification.classList.add("show-up");
-      desktopNotification.innerText = message;
-    }
+    currentErrorMessage = message;
+    updateErrorDisplay();
   }
 
   function clearError() {
+    currentErrorMessage = "";
     mobileNotification.classList.remove("show-up");
     mobileNotification.innerText = "";
     desktopNotification.classList.remove("show-up");
@@ -34,9 +30,24 @@ document.addEventListener("DOMContentLoaded", function () {
     inputElement.classList.remove("is-invalid");
   }
 
+  function updateErrorDisplay() {
+    if (currentErrorMessage) {
+      if (window.innerWidth < 768) {
+        mobileNotification.classList.add("show-up");
+        mobileNotification.innerText = currentErrorMessage;
+        desktopNotification.classList.remove("show-up");
+        desktopNotification.innerText = "";
+      } else {
+        desktopNotification.classList.add("show-up");
+        desktopNotification.innerText = currentErrorMessage;
+        mobileNotification.classList.remove("show-up");
+        mobileNotification.innerText = "";
+      }
+    }
+  }
+
   function validateInput() {
-    checkEmpty();
-    if (checkEmpty() !== true) {
+    if (!checkEmpty()) {
       validateEmail();
     }
   }
@@ -54,4 +65,6 @@ document.addEventListener("DOMContentLoaded", function () {
   inputElement.addEventListener("input", function () {
     validateInput();
   });
+
+  window.addEventListener("resize", updateErrorDisplay);
 });
