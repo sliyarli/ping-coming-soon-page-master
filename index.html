@@ -53,7 +53,7 @@
       <p>Subscribe and get notified</p>
       <div class="form-container">
         <form
-          class="newsletter-form d-flex justify-content-center align-items-center gap-2"
+          class="newsletter-form d-flex flex-column flex-lg-row justify-content-center align-items-center gap-2"
         >
           <input
             type="email"
@@ -61,10 +61,21 @@
             id="email"
             placeholder="Your email address..."
           />
-          <button class="form-button text-white" type="submit">
+          <p
+            id="mobile-notification"
+            class="notification-message text-danger text-center text-lg-start fst-italic fw-normal pt-1 ps-lg-4 d-none"
+          >
+            Please provide a valid email address
+          </p>
+          <button class="form-button text-white mt-3 mt-lg-0" type="submit">
             Notify Me
           </button>
         </form>
+        <p
+          class="notification-message text-danger text-center text-lg-start fst-italic fw-normal pt-1 ps-lg-4 d-none"
+        >
+          Please provide a valid email address
+        </p>
       </div>
     </header>
     <main class="pt-3">

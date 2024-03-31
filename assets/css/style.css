@@ -51,9 +51,9 @@ header p {
 }
 
 .newsletter-form input {
-  border: 1px solid var(--pale-blue) !important;
+  border: 1px solid var(--pale-blue);
   width: 270px;
-  padding: 0px 15px;
+  padding: 0px 20px;
 }
 
 .newsletter-form input::placeholder {
@@ -71,6 +71,21 @@ header p {
   width: 130px;
   background-color: var(--blue);
   font-size: 12px;
+  transition: 0.3s;
+}
+
+.form-button:hover {
+  background-color: #7195f5;
+  cursor: pointer;
+}
+
+.newsletter-form input.input-error {
+  border: 1px solid red;
+}
+
+.notification-message {
+  margin: 0 !important;
+  font-size: 8px;
 }
 
 main img {
@@ -85,8 +100,43 @@ main img {
   width: 20px;
   height: 20px;
   font-size: 12px;
+  transition: 0.3s;
+  color: var(--blue);
 }
+
+.social-media-item:hover {
+  color: white;
+  background-color: var(--blue);
+}
+
 .copyright-text {
   font-size: 10px;
   color: var(--pale-blue);
 }
+
+/* RESPONSIVE DESIGN */
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    main img{
+        width: 70%;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+
+/* RESPONSIVE DESIGN */
