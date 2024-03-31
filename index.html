@@ -53,29 +53,31 @@
       <p>Subscribe and get notified</p>
       <div class="form-container">
         <form
-          class="newsletter-form d-flex flex-column flex-lg-row justify-content-center align-items-center gap-2"
+          id="newsletter-form"
+          class="newsletter-form d-flex flex-column flex-sm-column flex-md-row flex-lg-row justify-content-center align-items-center gap-2"
         >
           <input
             type="email"
             name="email"
             id="email"
             placeholder="Your email address..."
+            class="form-control"
           />
           <p
             id="mobile-notification"
-            class="notification-message text-danger text-center text-lg-start fst-italic fw-normal pt-1 ps-lg-4 d-none"
+            class="notification-message text-danger text-center text-lg-start fst-italic fw-normal pt-3 ps-lg-4"
+          ></p>
+          <button
+            class="form-button text-white mt-3 mt-sm-0 mt-md-0 mt-lg-0"
+            type="submit"
           >
-            Please provide a valid email address
-          </p>
-          <button class="form-button text-white mt-3 mt-lg-0" type="submit">
             Notify Me
           </button>
         </form>
         <p
-          class="notification-message text-danger text-center text-lg-start fst-italic fw-normal pt-1 ps-lg-4 d-none"
-        >
-          Please provide a valid email address
-        </p>
+          id="desktop-notification"
+          class="notification-message text-danger text-lg-start fst-italic fw-normal pt-1 ps-lg-4"
+        ></p>
       </div>
     </header>
     <main class="pt-3">
@@ -103,5 +105,6 @@
       </div>
       <p class="copyright-text">&copy; Copyright Ping. All rights reserved.</p>
     </footer>
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>

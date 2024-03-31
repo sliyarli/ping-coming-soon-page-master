@@ -83,7 +83,12 @@ header p {
   border: 1px solid red;
 }
 
-.notification-message {
+.show-up {
+  display: block !important;
+}
+
+.form-container p {
+  display: none;
   margin: 0 !important;
   font-size: 8px;
 }
@@ -118,9 +123,9 @@ main img {
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
-    main img{
-        width: 70%;
-    }
+  main img {
+    width: 70%;
+  }
 }
 
 /* Small devices (landscape phones, 576px and up) */
