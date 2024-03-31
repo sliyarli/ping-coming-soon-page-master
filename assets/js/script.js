@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function showError(message) {
+    inputElement.classList.add("is-invalid")
     currentErrorMessage = message;
     updateErrorDisplay();
   }
